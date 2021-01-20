@@ -15,8 +15,7 @@ class ShuffleA extends Component {
     fixedAllDifferentShuffle = () => {
         let a = [...this.state.values];
         let f = this.getStatus(a);
-        console.log([...a]);
-        console.log(...f);
+
         // memorize position of fixed elements
         let fixed = a.reduce((acc, e, i) => {
             if (f[i]) acc.push([e, i]);
@@ -30,11 +29,12 @@ class ShuffleA extends Component {
             let currentIndex = a.indexOf(item);
             [a[initialIndex], a[currentIndex]] = [a[currentIndex], a[initialIndex]];
         });
-        console.log(...a);
+
         this.setState({
             values: [...a]
         });
     };
+
     getStatus = a => {
         let stat = [];
         let attempted = [...this.state.attemptedValues];
@@ -46,9 +46,9 @@ class ShuffleA extends Component {
                 stat.push(false);
             }
         }
-        console.log(stat);
         return stat;
-    }
+    };
+
     shuffle = a => {
         return a.reduce((l, e, i) => {
             const j = Math.floor(Math.random() * (a.length - i) + i); // j is in [i, a.length[
@@ -56,6 +56,7 @@ class ShuffleA extends Component {
             return a;
         }, a)
     };
+
     openChallenge = (i) => {
        const tasks=['Challenge 1:\n Recall any 3 dialogues which teachers used for scolding students during your school days',
             'Challenge 2: \nWOW This is an Angel!!',
@@ -88,7 +89,7 @@ class ShuffleA extends Component {
             x.disabled = true;
             x.style.backgroundColor = 'grey';
         }
-    }
+    };
 
     constructor(props) {
         super(props);

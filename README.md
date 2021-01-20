@@ -1,13 +1,9 @@
-# Simple React JS Project
+# Simple React JS Game
 
 ## What is the use of this Repo
 
-This Project is a Simple ReactJS Project which demonstrates the following
-1. Creating a Component in React
-2. Making HTTP calls
-3. Communicating between parent and child component
-4. Using Bootstrap along with React
-5. Using Basic Routing in React
+This Project is a Simple ReactJS Project which is an interactive and creative image game.
+1. This image game consists of a 3x3 table in which each cell has a background image.
 
 The project Template can be used to build bigger projects
 

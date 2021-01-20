@@ -15,13 +15,11 @@ class Demo extends Component {
     wrongGuess =() => {
         this.state.clickCount++;
         this.fixedAllDifferentShuffle();
-    }
+    };
 
     fixedAllDifferentShuffle = () => {
         let a = [...this.state.values];
         let f = this.getStatus(a);
-        console.log([...a]);
-        console.log(...f);
         // memorize position of fixed elements
         let fixed = a.reduce((acc, e, i) => {
             if (f[i]) acc.push([e, i]);
@@ -35,11 +33,12 @@ class Demo extends Component {
             let currentIndex = a.indexOf(item);
             [a[initialIndex], a[currentIndex]] = [a[currentIndex], a[initialIndex]];
         });
-        console.log(...a);
+
         this.setState({
             values: [...a]
         });
     };
+
     getStatus = a => {
         let stat = [];
         let attempted = [...this.state.attemptedValues];
@@ -51,9 +50,9 @@ class Demo extends Component {
                 stat.push(false);
             }
         }
-        console.log(stat);
         return stat;
-    }
+    };
+
     shuffle = a => {
         return a.reduce((l, e, i) => {
             const j = Math.floor(Math.random() * (a.length - i) + i); // j is in [i, a.length[
@@ -61,6 +60,7 @@ class Demo extends Component {
             return a;
         }, a)
     };
+
     openChallenge = (i) => {
         const tasks = ['Task1...', 'Task2...',
             'WOW This is an Angel!!', 'Task4...', 'Task5...',
@@ -85,7 +85,7 @@ class Demo extends Component {
             x.disabled = true;
             x.style.backgroundColor = 'grey';
         }
-    }
+    };
 
     constructor(props) {
         super(props);

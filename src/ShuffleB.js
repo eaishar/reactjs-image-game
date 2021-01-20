@@ -15,8 +15,7 @@ class ShuffleB extends Component {
     fixedAllDifferentShuffle = () => {
         let a = [...this.state.values];
         let f = this.getStatus(a);
-        console.log([...a]);
-        console.log(...f);
+
         // memorize position of fixed elements
         let fixed = a.reduce((acc, e, i) => {
             if (f[i]) acc.push([e, i]);
@@ -30,11 +29,12 @@ class ShuffleB extends Component {
             let currentIndex = a.indexOf(item);
             [a[initialIndex], a[currentIndex]] = [a[currentIndex], a[initialIndex]];
         });
-        console.log(...a);
+
         this.setState({
             values: [...a]
         });
     };
+
     getStatus = a => {
         let stat = [];
         let attempted = [...this.state.attemptedValues];
@@ -46,9 +46,9 @@ class ShuffleB extends Component {
                 stat.push(false);
             }
         }
-        console.log(stat);
         return stat;
-    }
+    };
+
     shuffle = a => {
         return a.reduce((l, e, i) => {
             const j = Math.floor(Math.random() * (a.length - i) + i); // j is in [i, a.length[
