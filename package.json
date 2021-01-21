@@ -1,8 +1,8 @@
 {
-  "name": "simple-react-game",
+  "name": "reactjs-image-game",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://eaishar.github.io/simple-react-game",
+  "homepage": "https://eaishar.github.io/reactjs-image-game",
   "dependencies": {
     "axios": "^0.18.0",
     "create-react-class": "^15.7.0",

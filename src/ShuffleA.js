@@ -128,7 +128,7 @@ class ShuffleA extends Component {
                 <button type="button" className="sButton" onClick={this.wrongGuess}>Wrong Guess?{this.state.clickCount}</button>
                 </div>
                 <table border="0" className="myTable">
-                    <thead><h2>Team A</h2></thead>
+                    <thead><h2>Team C</h2></thead>
                     <tr>
 
                         {row1.map((image, key) => {
