@@ -86,7 +86,7 @@ class ShuffleC extends Component {
             x.style.backgroundColor = 'grey';
         }
     };
-    
+
     wrongGuess =() => {
         this.state.clickCount++;
         this.fixedAllDifferentShuffle();

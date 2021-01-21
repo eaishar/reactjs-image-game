@@ -1,8 +1,8 @@
 {
-  "name": "simple-reactjs-app",
-  "version": "0.1.0",
+  "name": "simple-react-game",
+  "version": "1.0.0",
   "private": true,
-  "homepage": "https://aditya-sridhar.github.io/simple-reactjs-app",
+  "homepage": "https://eaishar.github.io/simple-react-game",
   "dependencies": {
     "axios": "^0.18.0",
     "create-react-class": "^15.7.0",
